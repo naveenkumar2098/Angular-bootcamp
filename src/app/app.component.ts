@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-app';
+  items = ['Fan', 'Bulb', 'Table'];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+  }
 }
