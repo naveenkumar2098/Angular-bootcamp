@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-app';
+  elementVisibility = false;
+  items = ['car', 'train', 'bus', 'bike', 'airplane'];
+
+  toggleElementVisibility() {
+    this.elementVisibility = !this.elementVisibility;
+  }
+
 }
