@@ -1,0 +1,8 @@
+.success {
+    color: rgb(84, 214, 84);
+    font-size: 25px;
+}
+.danger {
+    color: #ff0000;
+    font-size: 25px;
+}

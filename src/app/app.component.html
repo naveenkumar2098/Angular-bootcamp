@@ -7,7 +7,9 @@
     <button (click)="toggleElementVisibility()">Show Element</button>
     <!--Q2. Change the class of div on the basis of click using attribute directive -->
     <h4>Change the class of div on the basis of click using attribute directive</h4>
-    <div class="box2"></div>
+    <div class="my_class" (click)="clickEvent()"  [ngClass]="status ? 'success' : 'danger'">                
+        Some content
+    </div>
     <!--Q3. Iterate a list of Item using structural directive -->
     <h4>Iterate a list of Item using structural directive</h4>
     <ul>
@@ -15,6 +17,9 @@
     </ul>
     <!--Q4. Make a input box and set its default value using ngModel -->
     <h4>Make a input box and set its default value using ngModel</h4>
+    <label >Username</label>
+    <input type="text" [(ngModel)] ="name">
+    <p>{{ name }}</p>
     <!-- Q5. Create custom directive and change the innerText of the element to  ‘ Hello , I am Custom Directive’ -->
     <h4>Create custom directive and change the innerText of the element to  ‘Hello , I am Custom Directive’.</h4>
     <p appText></p>
