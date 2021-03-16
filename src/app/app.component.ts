@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-app';
+  randomData: string = 'initial';
+
+  constructor() {
+    setTimeout(() => {
+      this.randomData = 'final';
+    }, 5000);
+  }
 }
