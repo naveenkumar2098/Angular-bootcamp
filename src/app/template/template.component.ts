@@ -10,6 +10,7 @@ export class TemplateComponent implements OnInit {
   @ViewChild ('f') signup = 'NgForm';
   defaultQuestion = 'Delhi';
   genders = ['Male', 'Female'];
+  fileToUpload: File = null;
 
   constructor() { }
 
@@ -18,6 +19,10 @@ export class TemplateComponent implements OnInit {
 
   onSubmit() {
     console.log(this.signup);
+  }
+
+  handleFileInput(files: FileList) {
+      this.fileToUpload = files.item(0);
   }
 
 }
