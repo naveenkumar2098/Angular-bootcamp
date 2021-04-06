@@ -15,7 +15,7 @@ export class AuthGuard implements CanActivate {
     }
 
     canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot){
-    if ($('#username').val() =="Charu" && $('#password').val()=='123') {
+    if ($('#username').val() =="Naveen" && $('#password').val()=='123') {
             return true;
         } else {
             this.router.navigate(['/404']);
