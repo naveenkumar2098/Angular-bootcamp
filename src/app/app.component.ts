@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-app';
+  @ViewChild ('f') signup="NgForm";
+  
+  constructor(private router: Router) {}
+
+  onSubmit(){
+      this.router.navigate(['/dashboard']);
+  }
 }
