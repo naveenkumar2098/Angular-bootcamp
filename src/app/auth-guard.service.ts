@@ -9,13 +9,11 @@ declare var $: any;
 
 export class AuthGuard implements CanActivate {
     constructor(private router: Router) {
-        // localStorage.setItem('username',');
-        console.log($('#username'));
-        // debugger;
+        console.log($('#email'));
     }
 
     canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot){
-    if ($('#username').val() =="Naveen" && $('#password').val()=='123') {
+    if ($('#email').val() =="naveen.kumar@tothenew.com" && $('#password').val()=='Naveen123@') {
             return true;
         } else {
             this.router.navigate(['/404']);

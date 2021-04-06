@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -24,7 +24,7 @@ const appRoutes : Routes = [
     path: 'login',component:AppComponent, pathMatch:'full'
   },
   {
-    path: '404',component:NotfoundComponent
+    path: '404',component: NotfoundComponent
   }
   
   
@@ -46,7 +46,7 @@ const appRoutes : Routes = [
     StoreModule.forRoot({
       tutorial: reducer
     }),
-  
+    ReactiveFormsModule
     
   ],
   providers: [ResolveService],
